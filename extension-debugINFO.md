@@ -7,7 +7,7 @@
 2. the inspector tool
    - the `inspector` tool (little arrow) allows you to select content and identify common `HTML`, `CSS`, or `JavaScript` tags
 3. console.log() _and_ console.dir()
-   - `console.log()` and `console.dir()` can display all sorts of useful information that can be executed during `run-time`
+   - `console.log()` and `console.dir()` can display all sorts of useful information that can be executed during `runtime`
    - in _most_ cases `.log()` prints the _`toString` representation of the `Object`_ while `.dir()` recognizes the `Object` and prints _only the `properties`_
 4. JSON.stringify()
    - `JSON.stringify()` lets you grab your content in a string format (remember our `JSON` references in lecture?)
@@ -25,8 +25,29 @@ If you want to be extra careful loging `Objects`:
  ```JavaScript
  // You could try these for any website
  console.log(document.body);
- console.dir(document.body)
+ console.dir(document.body);
  ```
+
+```HTML
+<!DOCTYPE html>
+   <html>
+      <head>
+         <!-- REMEMBER: you can save me and then open me in a browser to interact with me -->
+      </head>
+      <body>
+         <h2>Create JSON string from a JavaScript object.</h2>
+         <p id="demo"></p>
+         <script>
+            // and also try this? let me create an object
+            let obj = { "name":"alien plant", "age":679, "city":"that red mountain on Mars"};
+            // let me make it a string
+            let myJSON = JSON.stringify(obj);
+            // now insert the string into an empty paragraph - id="demo"
+            document.getElementById("demo").innerHTML = myJSON;
+         </script>
+      </body>
+   </html>
+```
 
 Instead of `document.body`, what other `Object` instances might be useful to `inspect`?
 
@@ -36,7 +57,6 @@ Instead of `document.body`, what other `Object` instances might be useful to `in
 - ?
 
 ---
-
 
 ## Couple more questions
 
